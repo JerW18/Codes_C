@@ -421,15 +421,18 @@ int main()
                         {
                             do
                             {
-                                //Asks how much turnips the player wants to buy
-                                printf("\n*************************************************************\n");
-                                displayTurnipStatus(nBells, nTurnipStacks);
-                                printf("Turnip Buy Price: %d\n", nTurnipBuyPrice);
-                                printf("Turnip Buy Price (1 Stack): %d\n\n", nTurnipBuyPrice * 10);
-                                printf("How many stacks of turnips do you want to buy?\n");
-                                printf("Stacks: ");
-                                scanf("%d", &nStacks);
-
+                                do
+                                {
+                                    //Asks how much turnips the player wants to buy
+                                    printf("\n*************************************************************\n");
+                                    displayTurnipStatus(nBells, nTurnipStacks);
+                                    printf("Turnip Buy Price: %d\n", nTurnipBuyPrice);
+                                    printf("Turnip Buy Price (1 Stack): %d\n\n", nTurnipBuyPrice * 10);
+                                    printf("How many stacks of turnips do you want to buy?\n");
+                                    printf("Stacks: ");
+                                    scanf("%d", &nStacks);
+                                } while (nStacks < 0);
+                                
                                 if (isEnoughBells(nTurnipBuyPrice, nBells, nStacks) == 1)
                                 {
                                     //Function solves for bells and turnips after buying
@@ -514,15 +517,18 @@ int main()
                         {
                             do
                             {
-                                //Asks how much turnips the player wants to sell
-                                printf("\n*************************************************************\n");
-                                displayTurnipStatus(nBells, nTurnipStacks);
-                                printf("Turnip Sell Price: %d\n", nTurnipSellPrice);
-                                printf("Turnip Sell Price (1 Stack): %d\n\n", nTurnipSellPrice * 10);
-                                printf("How many stacks of turnips do you want to sell?\n");
-                                printf("Stacks: ");
-                                scanf("%d", &nStacks);
-
+                                do
+                                {
+                                    //Asks how much turnips the player wants to sell
+                                    printf("\n*************************************************************\n");
+                                    displayTurnipStatus(nBells, nTurnipStacks);
+                                    printf("Turnip Sell Price: %d\n", nTurnipSellPrice);
+                                    printf("Turnip Sell Price (1 Stack): %d\n\n", nTurnipSellPrice * 10);
+                                    printf("How many stacks of turnips do you want to sell?\n");
+                                    printf("Stacks: ");
+                                    scanf("%d", &nStacks);
+                                } while (nStacks < 0);
+                                
                                 if (isEnoughTurnips(nTurnipStacks, nStacks) == 1)
                                 {
                                     //Function solves for bells and turnips after selling
